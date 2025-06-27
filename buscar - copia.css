@@ -1,0 +1,112 @@
+.busqueda-container {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 20px;
+}
+.busqueda-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e53935;
+}
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+.producto-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.producto-imagen {
+    height: 200px;
+    overflow: hidden;
+}
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.producto-info {
+    padding: 15px;
+}
+.producto-categoria {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.producto-nombre {
+    font-weight: 600;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+}
+.producto-precio {
+    font-weight: 700;
+    color: #e53935;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.producto-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.btn-carrito, .btn-comprar {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-carrito:hover, .btn-comprar:hover {
+    background: #b71c1c;
+}
+.btn-favorito {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-favorito:hover {
+    border-color: #e53935;
+    color: #e53935;
+}
+.swal2-custom-btn {
+    background: #e53935 !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    padding: 10px 28px !important;
+    font-weight: bold !important;
+    border: none !important;
+    margin: 0 8px;
+    transition: background 0.2s;
+}
+.swal2-custom-btn:hover {
+    background: #b71c1c !important;
+}
+.swal2-custom-btn-cancel {
+    background: #fff !important;
+    color: #e53935 !important;
+    border-radius: 20px !important;
+    padding: 10px 28px !important;
+    font-weight: bold !important;
+    border: 2px solid #e53935 !important;
+    margin: 0 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.swal2-custom-btn-cancel:hover {
+    background: #e53935 !important;
+    color: #fff !important;
+}

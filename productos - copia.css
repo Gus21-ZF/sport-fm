@@ -1,0 +1,227 @@
+.productos-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* ...pega aquí todos los estilos internos de productos.php... */
+ /* Estilos específicos para la página de productos */
+        .productos-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Filtros */
+        .filtros {
+            width: 250px;
+            padding-right: 30px;
+        }
+        
+        .filtro-grupo {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .filtro-grupo h3 {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        
+        .filtro-opcion {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filtro-opcion input {
+            margin-right: 10px;
+        }
+        
+        /* Productos */
+        .productos-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .producto-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .producto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .producto-imagen {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .producto-card:hover .producto-imagen img {
+            transform: scale(1.05);
+        }
+        
+        .producto-info {
+            padding: 15px;
+        }
+        
+        .producto-categoria {
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .producto-nombre {
+            font-weight: 600;
+            margin-bottom: 10px;
+            height: 40px;
+            overflow: hidden;
+        }
+        
+        .producto-precio {
+            font-weight: 700;
+            color: #e53935;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .producto-precio.old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+            margin-right: 8px;
+        }
+        
+        .producto-acciones {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .btn-carrito {
+            background: #111;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn-carrito:hover {
+            background: #333;
+        }
+        
+        .btn-comprar {
+            background: #e53935;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .btn-comprar:hover {
+            background: #b71c1c;
+        }
+        
+        .btn-favorito {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-favorito:hover {
+            border-color: #e53935;
+            color: #e53935;
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumbs a {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumbs span {
+            margin: 0 5px;
+            color: #999;
+        }
+        
+        /* Ordenar */
+        .ordenar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        .ordenar-btn {
+            border: 2px solid #e53935;
+            background: rgb(0, 0, 0);
+            color: #e53935;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            outline: none;
+        }
+        
+        .ordenar-btn.active,
+        .ordenar-btn:focus {
+            background: #e53935;
+            color: #fff;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .productos-container {
+                flex-direction: column;
+            }
+            
+            .filtros {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .productos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
