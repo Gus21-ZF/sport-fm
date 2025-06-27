@@ -36,7 +36,7 @@ $ofertas = $conn->query($query_ofertas);
             <div class="logo">SPORT-FM</div>
             <div class="nav-links">
                 <a href="#" class="active">Inicio</a>
-                <a href="productos.php">Productos</a>
+                <a href="productos.md">Productos</a>
                 <a href="ofertas.php">Ofertas</a>
                 <a href="#" id="buscar-btn">Buscar</a>
                 <a href="#">Contacto</a>
