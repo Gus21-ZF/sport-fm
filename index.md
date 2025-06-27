@@ -50,9 +50,7 @@
                     </svg>
                     <?= number_format($calificacion, 1) ?>
                 </div>
-                <?php endif; ?>
-                <div id="cantidad-<?= $producto['id'] ?>" class="cantidad-disponible">
-                    <?= $cantidad ?> disponibles
+               
                 </div>
                 <img src="<?= htmlspecialchars($producto['imagen']) ?>" alt="<?= htmlspecialchars($producto['nombre']) ?>">
                 <div class="product-title"><?= htmlspecialchars($producto['nombre']) ?></div>
@@ -72,24 +70,7 @@
         <div class="carousel-container">
             <button class="carousel-btn prev">&#10094;</button>
             <div class="carousel-track">
-                <?php if ($ofertas && $ofertas->num_rows > 0): ?>
-                    <?php while($oferta = $ofertas->fetch_assoc()): ?>
-                    <div class="carousel-item" style="position:relative;">
-                        <img src="<?= htmlspecialchars($oferta['imagen']) ?>" alt="<?= htmlspecialchars($oferta['nombre']) ?>">
-                        <div class="precios-rebaja">
-                            <span class="sale-price">$<?= number_format($oferta['precio_oferta'], 2) ?></span>
-                            <span class="old-price">$<?= number_format($oferta['precio'], 2) ?></span>
-                        </div>
-                        <div class="product-title"><?= htmlspecialchars($oferta['nombre']) ?></div>
-                        <?php
-                            $query_cantidad = "SELECT cantidad FROM productos WHERE id = " . intval($oferta['id']);
-                            $res_cantidad = $conn->query($query_cantidad);
-                            $cantidad = $res_cantidad ? $res_cantidad->fetch_assoc()['cantidad'] : 0;
-                        ?>
-                        <div class="cantidad-disponible"><?= $cantidad ?> disponibles</div>
-                    </div>
-                    <?php endwhile; ?>
-                <?php else: ?>
+                
                     <div class="no-offers">
                         <p>Actualmente no hay ofertas disponibles</p>
                     </div>
